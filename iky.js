@@ -911,507 +911,10 @@ buttons: buttons,
 ikyy.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
                  
-                   case 'menu3':{    
-                   reply(`*MENAMPILKAN MENU...*`)         
-                   let totalchat = await ikyy.chats.all()
-                   let i = []
-                   let giid = []
-                   for (let mem of totalchat) {
-                   i.push(mem.jid)
-                   }
-                for (let id of i) {
-                    if (id && id.includes('g.us')) {
-                        giid.push(id)
-                    }
-                }
-                let timestampi = speed();
-                let latensii = speed() - timestampi
-                
-                let anu = process.uptime()
-                            try {
-                var pic = await ikyy.getProfilePicture(`${sender.split('@')[0]}@c.us`)
-            } catch {
-                var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
-            }
-let img = fs.readFileSync('./media/Nakano.jpg')
-let menuhe = `
-Hai Kak👋 ${pushname}
-
-❐──➨「 𝑰𝒏𝒇𝒐 𝒃𝒐𝒕 」
-𒍮Bot name : ${botName}
-𒍮Owner : ${ownerName}
-
-┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
-┃▹  ${prefix}bc *teks*
-┃▹  ${prefix}term
-┃▹  ${prefix}self
-┃▹  ${prefix}public
-┃▹  ${prefix}eval
-┃▹  ${prefix}reset
-┃▹  ${prefix}clearall
-┃▹  ${prefix}leaveall
-┃▹  ${prefix}addvn
-┃▹  ${prefix}getvn
-┃▹  ${prefix}addimage
-┃▹  ${prefix}getimage
-┃▹  ${prefix}addvideo
-┃▹  ${prefix}getvideo
-┃▹  ${prefix}slow
-┃▹  ${prefix}leaveall
-┃▹  ${prefix}join *link gc*
-┃▹  ${prefix}shutdown
-┃▹  ${prefix}getquoted
-┃▹  ${prefix}addupdate *fiturnya*
-┃▹  ${prefix}exif *nama|author*
-┃▹  ${prefix}sewa add/del *waktunya*
-┃▹  ${prefix}premium add @tag|nomor
-┃▹  ${prefix}premium del @tag|nomor
-┗⬡
-┏━▹ MENU
-┃▹ chiisaihentai
-┃▹ trap
-┃▹ blowjob
-┃▹ yaoi
-┃▹ ecchi
-┃▹ hentai
-┃▹ ahegao
-┃▹ hololewd
-┃▹ sideoppai
-┃▹ animefeets
-┃▹ animebooty
-┃▹ animethighss
-┃▹ hentaiparadise
-┃▹ animearmpits
-┃▹ hentaifemdom
-┃▹ lewdanimegirls
-┃▹ biganimetiddies
-┃▹ animebellybutton
-┃▹ hentai4everyone
-┗━▹
-┏━▹ MENU
-┃▹ bj
-┃▹ ero
-┃▹ ppcp
-┃▹ cum
-┃▹ feet
-┃▹ yuri
-┃▹ trap
-┃▹ lewd
-┃▹ feed
-┃▹ eron
-┃▹ solo
-┃▹ gasm
-┃▹ poke
-┃▹ anal
-┃▹ holo
-┃▹ tits
-┃▹ kuni
-┃▹ kiss
-┃▹ erok
-┃▹ smug
-┃▹ baka
-┃▹ solog
-┃▹ feetg
-┃▹ lewdk
-┃▹ waifu
-┃▹ pussy
-┃▹ femdom
-┃▹ cuddle
-┃▹ hentai
-┃▹ eroyuri
-┃▹ cum_jpg
-┃▹ blowjob
-┃▹ erofeet
-┃▹ holoero
-┃▹ classic
-┃▹ erokemo
-┃▹ fox_girl
-┃▹ futanari
-┃▹ lewdkemo
-┃▹ wallpaper
-┃▹ pussy_jpg
-┃▹ kemonomimi
-┃▹ nsfw_avatar
-┃▹ ngif
-┃▹ nsfw_neko_gif
-┃▹ random_hentai_gif
-┗━▹
-┏━▹ MENU
-┃▹ shadow text
-┃▹ cup text
-┃▹ cup1 text
-┃▹ romance text
-┃▹ smoke text
-┃▹ burnpaper text
-┃▹ lovemessage text
-┃▹ undergrass text
-┃▹ love text
-┃▹ coffe text
-┃▹ woodheart text
-┃▹ woodenboard text
-┃▹ summer3d text
-┃▹ wolfmetal text
-┃▹ nature3d text
-┃▹ underwater text
-┃▹ golderrose text
-┃▹ summernature text
-┃▹ letterleaves text
-┃▹ glowingneon text
-┃▹ fallleaves text
-┃▹ flamming text
-┃▹ harrypotter text
-┃▹ carvedwood text
-┃▹ tiktok text1 text2
-┃▹ arcade8bit text1 text2
-┃▹ battlefield4 text1 text2
-┃▹ pubg text1 text2
-┗━▹
-┏━▹「 Ephoto 360 」
-┃▹ wetglass text
-┃▹ multicolor3d text
-┃▹ watercolor text
-┃▹ luxurygold text
-┃▹ galaxywallpaper text
-┃▹ lighttext text
-┃▹ beautifulflower text
-┃▹ puppycute text
-┃▹ royaltext text
-┃▹ heartshaped text
-┃▹ birthdaycake text
-┃▹ galaxystyle text
-┃▹ hologram3d text
-┃▹ greenneon text
-┃▹ glossychrome text
-┃▹ greenbush text
-┃▹ metallogo text
-┃▹ noeltext text
-┃▹ glittergold text
-┃▹ textcake text
-┃▹ starsnight text
-┃▹ wooden3d text
-┃▹ textbyname text
-┃▹ writegalacy text
-┃▹ galaxybat text
-┃▹ snow3d text
-┃▹ birthdayday text
-┃▹ goldplaybutton text
-┃▹ silverplaybutton text
-┃▹ freefire text
-┗━▹
-┏⬡  𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
-┃▹ ${prefix}drakorongoing
-┃▹ ${prefix}lk21 query
-┃▹ ${prefix}wattpad url_wattpad
-┃▹ ${prefix}wattpadsearch query
-┃▹ ${prefix}cerpen
-┃▹ ${prefix}ceritahoror
-┗⬡
-┏⬡  𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
-┃▹ ${prefix}quotes
-┃▹ ${prefix}quotesdiLan
-┃▹ ${prefix}quotesanime
-┃▹ ${prefix}quotesimage
-┃▹ ${prefix}faktaunik
-┃▹ ${prefix}katabijak
-┃▹ ${prefix}pantun
-┃▹ ${prefix}bucin
-┃▹ ${prefix}randomnama
-┗⬡
-┏⬡ ??𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
-┃▹  ${prefix}loli
-┃▹  ${prefix}manga
-┃▹  ${prefix}anime 
-┃▹  ${prefix}lolivideo
-┃▹  ${prefix}husbu
-┃▹  ${prefix}waifu
-┃▹  ${prefix}milf
-┃▹  ${prefix}neko
-┃▹  ${prefix}kanna
-┃▹  ${prefix}sagiri
-┃▹  ${prefix}hentai
-┃▹  ${prefix}cosplay
-┃▹  ${prefix}wallnime
-┃▹  ${prefix}kusonime
-┃▹  ${prefix}megumin
-┃▹  ${prefix}otakudesu
-┃▹  ${prefix}doujindesu
-┃▹  ${prefix}storyanime
-┃▹  ${prefix}nakanomiku
-┃▹  ${prefix}nakanoikyy
-┃▹  ${prefix}nakanoitsuki
-┃▹  ${prefix}otakuongoing
-┃▹  ${prefix}nhentai *code*
-┃▹  ${prefix}nekopoi *link*
-┃▹  ${prefix}nekopoi3d
-┃▹  ${prefix}nekopoicosplay
-┃▹  ${prefix}nekopoisearch
-┗⬡
-┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
-┃▹  ${prefix}fb 
-┃▹  ${prefix}igdl 
-┃▹  ${prefix}igdl2 
-┃▹  ${prefix}twitter 
-┃▹  ${prefix}tiktok 
-┃▹  ${prefix}play 
-┃▹  ${prefix}ythd 
-┃▹  ${prefix}ytmp3 
-┃▹  ${prefix}ytmp4 
-┃▹  ${prefix}soundcloud 
-┃▹  ${prefix}tiktoknowm 
-┃▹  ${prefix}tiktokaudio
-┃▹  ${prefix}mediafire 
-┃▹  ${prefix}nhentaipdf *code*
-┗⬡
-┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
-┃▹  ${prefix}brainly *query*
-┃▹  ${prefix}shopee *product*
-┃▹  ${prefix}playstore *query*
-┃▹  ${prefix}ssweb *query*
-┃▹  ${prefix}google *query*
-┃▹  ${prefix}image *query*
-┃▹  ${prefix}pinterest *query*
-┃▹  ${prefix}nulis *teks*
-┃▹  ${prefix}iguser *ussername*
-┃▹  ${prefix}igstalk *username*
-┃▹  ${prefix}githubstalk *username*
-┃▹  ${prefix}tiktokstalk *ussername*
-┃▹  ${prefix}img2url *reply foto*
-┃▹  ${prefix}ytsearch *query*
-┗⬡
-┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄??𝐔
-┃▹  ${prefix}slot
-┃▹  ${prefix}limitgame
-┃▹  ${prefix}gelud @tag
-┃▹  ${prefix}tictactoe @tag
-┃▹  ${prefix}siapaaku
-┃▹  ${prefix}family100
-┃▹  ${prefix}kuismath
-┃▹  ${prefix}asahotak
-┃▹  ${prefix}tebaklirik
-┃▹  ${prefix}tebaklagu
-┃▹  ${prefix}tebakkata
-┃▹  ${prefix}susunkata
-┃▹  ${prefix}kimiakuis
-┃▹  ${prefix}caklontong
-┃▹  ${prefix}tebakjenaka
-┃▹  ${prefix}tebakanime
-┃▹  ${prefix}tebaktebakan
-┃▹  ${prefix}tebakgambar
-┃▹  ${prefix}tebakbendera
-┃▹  ${prefix}suit *batu/kertas/gunting*
-┗⬡
-┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
-┃▹  ${prefix}dadu
-┃▹  ${prefix}bucinstick
-┃▹  ${prefix}doge
-┃▹  ${prefix}toimg
-┃▹  ${prefix}patrick
-┃▹  ${prefix}attp *teks*
-┃▹  ${prefix}stickeranime
-┃▹  ${prefix}semoji *emoji*
-┃▹  ${prefix}sticker *reply foto/video*
-┃▹  ${prefix}smeme *teks|teks*
-┃▹  ${prefix}swm *pack|author*
-┃▹  ${prefix}take *pack|author* 
-┃▹  ${prefix}tovideo *reply sgif*
-┗⬡
-┏⬡ 𝐋𝐈𝐒?? 𝐌𝐄𝐍𝐔
-┃▹  ${prefix}mining
-┃▹  ${prefix}togel
-┃▹  ${prefix}cekwatak
-┃▹  ${prefix}cekmati [nama]
-┃▹  ${prefix}wangy [nama]
-┃▹  ${prefix}citacita
-┃▹  ${prefix}toxic
-┃▹  ${prefix}truth
-┃▹  ${prefix}dare
-┃▹  ${prefix}apakah
-┃▹  ${prefix}bisakah
-┃▹  ${prefix}kapankah
-┃▹  ${prefix}rate
-┃▹  ${prefix}jadian
-┃▹  ${prefix}cantik
-┃▹  ${prefix}ganteng
-┃▹  ${prefix}beban
-┃▹  ${prefix}babi
-┃▹  ${prefix}cekganteng
-┃▹  ${prefix}cekcantik
-┗⬡
-┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
-┃▹  ${prefix}update
-┃▹  ${prefix}level
-┃▹  ${prefix}rules
-┃▹  ${prefix}profile
-┃▹  ${prefix}waktu
-┃▹  ${prefix}botstat
-┃▹  ${prefix}sewabot
-┃▹  ${prefix}listsewa
-┃▹  ${prefix}owner
-┃▹  ${prefix}ping
-┃▹  ${prefix}runtime
-┃▹  ${prefix}donasi
-┃▹  ${prefix}leaderboard
-┃▹  ${prefix}cekpremium
-┃▹  ${prefix}listpremium
-┃▹  ${prefix}sourcecode
-┃▹  ${prefix}bugreport *keluha
-┏⬡ 𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
-┃▹  ${prefix}listsurah
-┃▹  ${prefix}alquran
-┃▹  ${prefix}alquranaudio
-┃▹  ${prefix}asmaulhusna
-┃▹  ${prefix}kisahnabi
-┃▹  ${prefix}jadwalsholat
-┗⬡
-╠═══✪〘 Sound Menu〙✪══
-╠➥${prefix}sound1
-╠➥${prefix}sound2
-╠➥${prefix}sound3
-╠➥${prefix}sound4
-╠➥${prefix}sound5
-╠➥${prefix}sound6
-╠➥${prefix}sound7
-╠➥${prefix}sound8
-╠➥${prefix}sound9
-╠➥${prefix}sound10
-╠➥${prefix}sound11
-╠➥${prefix}sound12
-╠➥${prefix}sound13
-╠➥${prefix}sound14
-╠➥${prefix}sound15
-╠➥${prefix}sound16
-╠➥${prefix}sound17
-╠➥${prefix}sound18
-╠➥${prefix}sound19
-╠➥${prefix}sound20
-╠➥${prefix}sound21
-╠➥${prefix}sound22
-╠➥${prefix}sound23`
-let prep = await ikyy.prepareMessage('0@c.us', img, image, { thumbnail: await getBuffer(pic)}) 
-let imgMsg = prep.message.imageMessage
-res = await ikyy.prepareMessageFromContent(from,{
-"productMessage": {
-"product": {
-"productImage": imgMsg,
-"productId": "0",
-"title": `LIST MENU ${botName}`,
-"description": menuhe,
-"footerText": `bot by ${ownerName}`,
-"currencyCode": "IDR",
-"priceAmount1000": "0",
-"productImageCount": 1
-},
-"businessOwnerJid": `${ownerNumber}`,
-}
-}, {quoted: freply, mimetype: 'image/Menu.jpg', contextInfo:{externalAdReply: fakeLink }}) 
-
-ikyy.relayWAMessage(res)
-}
-break
-
-
-case 'menu2':
-              groups = ikyy.chats.array.filter(v => v.jid.endsWith('g.us'))
-              privat = ikyy.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
-              ram2 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
-              charger = `${charging ? 'lagi dicas' : 'ga dicas'}`
-              uptime = process.uptime();
-              timestampe = speed();
-              totalChat = await ikyy.chats.all()
-              latensie = speed() - timestampe
-              total = math(`${groups.length}*${privat.length}`)
-              try {
-               var pic = await ikyy.getProfilePicture(`${sender.split('@')[0]}@c.us`)
-            } catch {
-                var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
-            }
-              
-        menu =`*[ _${botName}_ ]*
-        
-${ucapanWaktu} Kak @${sender.split('@')[0]}`
-        
-wibu = `
-┌❏ *INDONESIA TIME*
-${petik}│◦➛ WIB : ${timuu}
-│◦➛ WITA : ${wita}
-└❏ WIT : ${wit}${petik}
-                          
-┌❏ *TODAY*
-${petik}│◦➛${ucapanWaktu}
-│◦➛Jam : ${timuu}
-└❏ Tanggal : ${date}${petik}
-
-┌❏ *DEVICE*
-${petik}│◦➛Whatsapp : ${wa_version}
-│◦➛Merk HP : ${device_manufacturer}
-│◦➛Versi HP : ${device_model}
-│◦➛Versi OS : ${os_version}
-│◦➛RAM : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-│◦➛MCC : ${mcc}
-└❏ MNC : ${mnc}${petik}
-
-┌─❑「 *BOT INFO* 」
-${petik}│◦➛ Owner : ${ownerName}
-│◦➛Group Chats : ${groups.length}
-│◦➛𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐂𝐡𝐚𝐭𝐬 : ${privat.length}
-│◦➛𝐁𝐚𝐭𝐞𝐫𝐚𝐢 : ${baterai}% ${charger}
-│◦➛𝐓𝐨𝐭𝐚𝐥 𝐂𝐡𝐚𝐭𝐬 : ${totalChat.length}
-│◦➛𝐀𝐜𝐭𝐢𝐯𝐞 : ${runtime(process.uptime())}
-│◦➛▢ 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 : ${os.platform()}
-└❏ ${petik}
-
-
-𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
-
-┏━▹ 𝐠𝐫𝐨𝐮𝐩𝐦𝐞𝐧𝐮
-┃
-┗━▹ 𝐰𝐢𝐛𝐮𝐦𝐞𝐧𝐮
-
-┏━▹ 𝐬𝐭𝐢𝐜𝐤𝐞𝐫𝐦𝐞𝐧𝐮
-┃
-┗━▹ 𝐨𝐰𝐧𝐞𝐫𝐦𝐞𝐧𝐮
-
-┏━▹ 𝐠𝐚𝐦𝐞𝐦𝐞𝐧𝐮
-┃
-┗━▹ 𝐟𝐮𝐧𝐦𝐞𝐧𝐮
-
-┏━▹ 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐦𝐞𝐧𝐮
-┃
-┗━▹ 𝐢𝐧𝐟𝐨𝐦𝐞𝐧𝐮
-
-┏━▹ 𝐨𝐭𝐡𝐞𝐫𝐦𝐞𝐧𝐮
-┃
-┗━▹ 𝐬𝐞𝐰𝐚𝐛𝐨𝐭
-
-┏━▹ *soundmenu*
-┃
-┗━▹ 𝐢𝐬𝐥𝐚𝐦𝐦𝐞𝐧𝐮
-
-┏━▹ 𝐫𝐚𝐧𝐝𝐨𝐦𝐭𝐞𝐱𝐭
-┃
-┗━▹ 𝐦𝐨𝐯𝐢𝐞𝐦𝐞𝐧𝐮
-
-┏━▹ 𝐫𝐚𝐧𝐝𝐨𝐦𝐢??𝐚𝐠𝐞
-┃
-┗━▹ 𝐞𝐩𝐡𝐨𝐭𝐨
-
-┏━▹ 𝐩𝐡𝐨𝐭𝐨𝐤𝐲
-┃
-┗━▹ 𝐭𝐞𝐱??𝐩𝐫𝐨
-
-┏━▹ 𝐈𝐦𝐚𝐠𝐞𝐦𝐚𝐧𝐢
-┃
-┗━▹ 𝐍𝐬𝐟𝐰𝐚𝐧𝐢𝐦𝐞
 
 
 
-
-© ›› ${ownerName} 
-`
-                    ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `${prefix} command`, buttonText: { displayText: `⬡ LIST MENU\n\n_jika bot tidak merespon ketik ${prefix}command_` }, type: 1 },{ buttonId: `${prefix}allmenu`, buttonText: { displayText: `⬡ ALL MENU\n\n_jika bot tidak merespon ketik ${prefix}allmenu_` }, type: 1 },{ buttonId: `${prefix}sewabot`, buttonText: { displayText: `⬡ SEWA BOT\n\njika bot tidak merespon ketik ${prefix}sewabot_` }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
-                     break
-
-case 'menu': 
+case 'menu2': 
               
           thu = await ikyy.getStatus(`${sender.split('@')[0]}@s.whatsapp.net`, MessageType.text)
               quotes = await fetchJson(`https://api.lolhuman.xyz/api/random/quotes?apikey=${setting.lolkey}`)
@@ -1463,11 +966,498 @@ ${petik}│◦➛ Owner :${ownerName}
 │◦➛𝐓𝐨𝐭𝐚𝐥 𝐂𝐡𝐚𝐭𝐬 : ${totalChat.length}
 │◦➛𝐀𝐜𝐭𝐢𝐯𝐞 : ${runtime(process.uptime())}
 │◦➛▢ 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 : ${os.platform()}
-└❏ ${petik}`
-wibu = `${quotes}`
-           ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: `⬡ LIST MENU\n\n_jika bot tidak merespon ketik ${prefix}command_` }, type: 1 },{ buttonId: `${prefix}sewabot`, buttonText: { displayText: `⬡ SEWA BOT\n\n_jika bot tidak merespon ketik ${prefix}sewabot_` }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
-          break
+└❏ ${petik}
 
+
+
+┌❏  *G R O U P M E N U*
+│◦➛ ${prefix}ɢʀᴏᴜᴘꜱᴇᴛᴛɪɴɢ
+│◦➛ ${prefix}ᴀꜰᴋ *ᴀʟᴀꜱᴀɴ*
+│◦➛ ${prefix}ᴄᴇᴋꜱᴇᴡᴀ
+│◦➛ ${prefix}ᴋɪᴄᴋᴀʟʟ
+│◦➛ ${prefix}ɪɴꜰᴏɢʀᴜᴘ
+│◦➛ ${prefix}ᴘʀᴏᴍᴏᴛᴇ
+│◦➛ ${prefix}ᴅᴇᴍᴏᴛᴇ
+│◦➛ ${prefix}ʟɪꜱᴛᴏɴʟɪɴᴇ
+│◦➛ ${prefix}ᴛᴀɢᴀʟʟ *ᴛᴇᴋꜱ*
+│◦➛ ${prefix}ʟᴇᴀᴠᴇ
+│◦➛ ${prefix}ᴋɪᴄᴋ *ʀᴇᴘʟʏ*
+│◦➛ ${prefix}ᴀᴅᴅ *+62xxxxxx*
+│◦➛ ${prefix}ꜱᴇᴛɢʀᴜᴘɴᴀᴍᴇ
+│◦➛ ${prefix}ꜱᴇᴛᴘᴘɢʀᴜᴘ
+│◦➛ ${prefix}ꜱᴇᴛᴅᴇꜱᴄ
+│◦➛ ${prefix}welcome enable/disable
+│◦➛ ${prefix}antilink enable/disable
+│◦➛ ${prefix}nsfw enable/disable
+│◦➛ ${prefix}notif *teks*
+│◦➛ ${prefix}ꜱɪᴅᴇʀ *ʀᴇᴘʟʏ ᴄʜᴀᴛ ʙᴏᴛ*
+│◦➛ ${prefix}ʜɪᴅᴇᴛᴀɢ *ᴛᴇᴋꜱ/ʀᴇᴘʟʏ ᴛᴇᴋꜱ*
+└❏ 
+
+
+┌❏ *N S F W A N I M E*
+│◦➛ ${prefix}chiisaihentai
+│◦➛ ${prefix}trap
+│◦➛ ${prefix}blowjob
+│◦➛ ${prefix}yaoi
+│◦➛ ${prefix}ecchi
+│◦➛ ${prefix}hentai
+│◦➛ ${prefix}ahegao
+│◦➛ ${prefix}hololewd
+│◦➛ ${prefix}sideoppai
+│◦➛ ${prefix}animefeets
+│◦➛ ${prefix}animebooty
+│◦➛ ${prefix}animethighss
+│◦➛ ${prefix}hentaiparadise
+│◦➛ ${prefix}animearmpits
+│◦➛ ${prefix}hentaifemdom
+│◦➛ ${prefix}lewdanimegirls
+│◦➛ ${prefix}biganimetiddies
+│◦➛ ${prefix}animebellybutton
+│◦➛ ${prefix}hentai4everyone
+└❏
+
+
+┌❏ *R A N D O M I M A G E*
+│◦➛ ${prefix}bj
+│◦➛ ${prefix}ero
+│◦➛ ${prefix}ppcp
+│◦➛ ${prefix}cum
+│◦➛ ${prefix}feet
+│◦➛ ${prefix}yuri
+│◦➛ ${prefix}trap
+│◦➛ ${prefix}lewd
+│◦➛ ${prefix}feed
+│◦➛ ${prefix}eron
+│◦➛ ${prefix}solo
+│◦➛ ${prefix}gasm
+│◦➛ ${prefix}poke
+│◦➛ ${prefix}anal
+│◦➛ ${prefix}holo
+│◦➛ ${prefix}tits
+│◦➛ ${prefix}kuni
+│◦➛ ${prefix}kiss
+│◦➛ ${prefix}erok
+│◦➛ ${prefix}smug
+│◦➛ ${prefix}baka
+│◦➛ ${prefix}solog
+│◦➛ ${prefix}feetg
+│◦➛ ${prefix}lewdk
+│◦➛ ${prefix}waifu
+│◦➛ ${prefix}pussy
+│◦➛ ${prefix}femdom
+│◦➛ ${prefix}cuddle
+│◦➛ ${prefix}hentai
+│◦➛ ${prefix}eroyuri
+│◦➛ ${prefix}cum_jpg
+│◦➛ ${prefix}blowjob
+│◦➛ ${prefix}erofeet
+│◦➛ ${prefix}holoero
+│◦➛ ${prefix}classic
+│◦➛ ${prefix}erokemo
+│◦➛ ${prefix}fox_girl
+│◦➛ ${prefix}futanari
+│◦➛ ${prefix}lewdkemo
+│◦➛ ${prefix}wallpaper
+│◦➛ ${prefix}pussy_jpg
+│◦➛ ${prefix}kemonomimi
+│◦➛ ${prefix}nsfw_avatar
+│◦➛ ${prefix}ngif
+│◦➛ ${prefix}nsfw_neko_gif
+│◦➛ ${prefix}random_hentai_gif
+└❏
+
+
+┌❏ *P H O T O O X Y
+│◦➛ ${prefix}shadow text
+│◦➛ ${prefix}cup text
+│◦➛ ${prefix}cup1 text
+│◦➛ ${prefix}romance text
+│◦➛ ${prefix}smoke text
+│◦➛ ${prefix}burnpaper text
+│◦➛ ${prefix}lovemessage text
+│◦➛ ${prefix}undergrass text
+│◦➛ ${prefix}love text
+│◦➛ ${prefix}coffe text
+│◦➛ ${prefix}woodheart text
+│◦➛ ${prefix}woodenboard text
+│◦➛ ${prefix}summer3d text
+│◦➛ ${prefix}wolfmetal text
+│◦➛ ${prefix}nature3d text
+│◦➛ ${prefix}underwater text
+│◦➛ ${prefix}golderrose text
+│◦➛ ${prefix}summernature text
+│◦➛ ${prefix}letterleaves text
+│◦➛ ${prefix}glowingneon text
+│◦➛ ${prefix}fallleaves text
+│◦➛ ${prefix}flamming text
+│◦➛ ${prefix}harrypotter text
+│◦➛ ${prefix}carvedwood text
+│◦➛ ${prefix}tiktok text1 text2
+│◦➛ ${prefix}arcade8bit text1 text2
+│◦➛ ${prefix}battlefield4 text1 text2
+│◦➛ ${prefix}pubg text1 text2
+└❏
+
+
+┌❏「 TEXTPROME MENU 」
+│◦➛ ${prefix}blackpink text
+│◦➛ ${prefix}neon text
+│◦➛ ${prefix}greenneon text
+│◦➛ ${prefix}advanceglow text
+│◦➛ ${prefix}futureneon text
+│◦➛ ${prefix}sandwriting text
+│◦➛ ${prefix}sandsummer text
+│◦➛ ${prefix}sandengraved text
+│◦➛ ${prefix}metaldark text
+│◦➛ ${prefix}neonlight text
+│◦➛ ${prefix}holographic text
+│◦➛ ${prefix}text1917 text
+│◦➛ ${prefix}minion text
+│◦➛ ${prefix}deluxesilver text
+│◦➛ ${prefix}newyearcard text
+│◦➛ ${prefix}bloodfrosted text
+│◦➛ ${prefix}halloween text
+│◦➛ ${prefix}jokerlogo text
+│◦➛ ${prefix}fireworksparkle text
+│◦➛ ${prefix}natureleaves text
+│◦➛ ${prefix}bokeh text
+│◦➛ ${prefix}toxic text
+│◦➛ ${prefix}strawberry text
+│◦➛ ${prefix}box3d text
+│◦➛ ${prefix}roadwarning text
+│◦➛ ${prefix}breakwall text
+│◦➛ ${prefix}icecold text
+│◦➛ ${prefix}luxury text
+│◦➛ ${prefix}cloud text
+│◦➛ ${prefix}summersand text
+│◦➛ ${prefix}horrorblood text
+│◦➛ ${prefix}thunder text
+│◦➛ ${prefix}pornhub text1 text2
+│◦➛ ${prefix}glitch text1 text2
+│◦➛ ${prefix}avenger text1 text2
+│◦➛ ${prefix}space text1 text2
+│◦➛ ${prefix}ninjalogo text1 text2
+│◦➛ ${prefix}marvelstudio text1 text2
+│◦➛ ${prefix}lionlogo text1 text2
+│◦➛ ${prefix}wolflogo text1 text2
+│◦➛ ${prefix}steel3d text1 text2
+│◦➛ ${prefix}wallgravity text1 text2
+└❏
+
+
+┌❏「 STORAGEMENU 」
+│◦➛ ${prefix}addsticker
+│◦➛ ${prefix}liststicker
+│◦➛ ${prefix}getsticker
+│◦➛ ${prefix}addvn
+│◦➛ ${prefix}listvn
+│◦➛ ${prefix}getvn
+│◦➛ ${prefix}addimage
+│◦➛ ${prefix}listimage
+│◦➛ ${prefix}getimage
+│◦➛ ${prefix}slow
+│◦➛ ${prefix}fast
+│◦➛ ${prefix}tupai
+│◦➛ ${prefix}reverse
+│◦➛ ${prefix}tomp3
+└❏
+
+
+┌❏ *E P H O T O 3 6 0*
+│◦➛ ${prefix}wetglass text
+│◦➛ ${prefix}multicolor3d text
+│◦➛ ${prefix}watercolor text
+│◦➛ ${prefix}luxurygold text
+│◦➛ ${prefix}galaxywallpaper text
+│◦➛ ${prefix}lighttext text
+│◦➛ ${prefix}beautifulflower text
+│◦➛ ${prefix}puppycute text
+│◦➛ ${prefix}royaltext text
+│◦➛ ${prefix}heartshaped text
+│◦➛ ${prefix}birthdaycake text
+│◦➛ ${prefix}galaxystyle text
+│◦➛ ${prefix}hologram3d text
+│◦➛ ${prefix}greenneon text
+│◦➛ ${prefix}glossychrome text
+│◦➛ ${prefix}greenbush text
+│◦➛ ${prefix}metallogo text
+│◦➛ ${prefix}noeltext text
+│◦➛ ${prefix}glittergold text
+│◦➛ ${prefix}textcake text
+│◦➛ ${prefix}starsnight text
+│◦➛ ${prefix}wooden3d text
+│◦➛ ${prefix}textbyname text
+│◦➛ ${prefix}writegalacy text
+│◦➛ ${prefix}galaxybat text
+│◦➛ ${prefix}snow3d text
+│◦➛ ${prefix}birthdayday text
+│◦➛ ${prefix}goldplaybutton text
+│◦➛ ${prefix}silverplaybutton text
+│◦➛ ${prefix}freefire text
+└❏ 
+
+
+┌❏  *M O V I E & S T O R Y*
+│◦➛ ${prefix}Ldrakorongoing
+│◦➛ ${prefix}lk21 query
+│◦➛ ${prefix}wattpad url_wattpad
+│◦➛ ${prefix}wattpadsearch query
+│◦➛ ${prefix}cerpen
+│◦➛ ${prefix}ceritahoror
+└❏ 
+
+
+┌❏  *R A N D O M T E X T*
+│◦➛ ${prefix}quotes
+│◦➛ ${prefix}quotesdiLan
+│◦➛ ${prefix}quotesanime
+│◦➛ ${prefix}quotesimage
+│◦➛ ${prefix}faktaunik
+│◦➛ ${prefix}katabijak
+│◦➛ ${prefix}pantun
+│◦➛ ${prefix}bucin
+│◦➛ ${prefix}randomnama
+└❏ 
+
+┌❏ *W I B U M E N U*
+│◦➛ ${prefix}loli
+│◦➛ ${prefix}manga
+│◦➛ ${prefix}anime 
+│◦➛ ${prefix}lolivideo
+│◦➛ ${prefix}husbu
+│◦➛ ${prefix}waifu
+│◦➛ ${prefix}milf
+│◦➛ ${prefix}neko
+│◦➛ ${prefix}kanna
+│◦➛ ${prefix}sagiri
+│◦➛ ${prefix}hentai
+│◦➛ ${prefix}cosplay
+│◦➛ ${prefix}wallnime
+│◦➛ ${prefix}kusonime
+│◦➛ ${prefix}megumin
+│◦➛ ${prefix}otakudesu
+│◦➛ ${prefix}doujindesu
+│◦➛ ${prefix}storyanime
+│◦➛ ${prefix}nakanomiku
+│◦➛ ${prefix}nakanoikyy
+│◦➛ ${prefix}nakanoitsuki
+│◦➛ ${prefix}otakuongoing
+└❏ 
+
+
+┌❏ *D O W N L O A D M E N U*
+│◦➛ ${prefix}fb 
+│◦➛ ${prefix}igdl 
+│◦➛ ${prefix}igdl2 
+│◦➛ ${prefix}twitter 
+│◦➛ ${prefix}tiktok 
+│◦➛ ${prefix}play 
+│◦➛ ${prefix}ythd 
+│◦➛ ${prefix}ytmp3 
+│◦➛ ${prefix}ytmp4 
+│◦➛ ${prefix}soundcloud 
+│◦➛ ${prefix}tiktoknowm 
+│◦➛ ${prefix}tiktokaudio
+│◦➛ ${prefix}mediafire 
+│◦➛ ${prefix}nhentaipdf *code*
+└❏ 
+
+
+┌❏ *M E N U L A I N N Y A*
+│◦➛ ${prefix}brainly *query*
+│◦➛ ${prefix}shopee *product*
+│◦➛ ${prefix}playstore *query*
+│◦➛ ${prefix}ssweb *query*
+│◦➛ ${prefix}google *query*
+│◦➛ ${prefix}image *query*
+│◦➛ ${prefix}pinterest *query*
+│◦➛ ${prefix}nulis *teks*
+│◦➛ ${prefix}iguser *ussername*
+│◦➛ ${prefix}igstalk *username*
+│◦➛ ${prefix}githubstalk *username*
+│◦➛ ${prefix}tiktokstalk *ussername*
+│◦➛ ${prefix}img2url *reply foto*
+│◦➛ ${prefix}ytsearch *query*
+└❏ 
+
+
+┌❏ *G A M E M E N U*
+│◦➛ ${prefix}slot
+│◦➛ ${prefix}limitgame
+│◦➛ ${prefix}gelud @tag
+│◦➛ ${prefix}tictactoe @tag
+│◦➛ ${prefix}siapaaku
+│◦➛ ${prefix}family100
+│◦➛ ${prefix}kuismath
+│◦➛ ${prefix}asahotak
+│◦➛ ${prefix}tebaklirik
+│◦➛ ${prefix}tebaklagu
+│◦➛ ${prefix}tebakkata
+│◦➛ ${prefix}susunkata
+│◦➛ ${prefix}kimiakuis
+│◦➛ ${prefix}caklontong
+│◦➛ ${prefix}tebakjenaka
+│◦➛ ${prefix}tebakanime
+│◦➛ ${prefix}tebaktebakan
+│◦➛ ${prefix}tebakgambar
+│◦➛ ${prefix}tebakbendera
+│◦➛ ${prefix}suit *batu/kertas/gunting*
+└❏ 
+
+
+┌❏ *S T I C K E R M E N U*
+│◦➛ ${prefix}dadu
+│◦➛ ${prefix}bucinstick
+│◦➛ ${prefix}doge
+│◦➛ ${prefix}toimg
+│◦➛ ${prefix}patrick
+│◦➛ ${prefix}attp *teks*
+│◦➛ ${prefix}attp2 *teks*
+│◦➛ ${prefix}stickeranime
+│◦➛ ${prefix}semoji *emoji*
+│◦➛ ${prefix}sticker *reply foto/video*
+│◦➛ ${prefix}smeme *teks|teks*
+│◦➛ ${prefix}swm *pack|author*
+│◦➛ ${prefix}take *pack|author* 
+│◦➛ ${prefix}tovideo *reply sgif*
+└❏ 
+
+
+┌❏ *F U N M E N U*
+│◦➛ ${prefix}mining
+│◦➛ ${prefix}togel
+│◦➛ ${prefix}cekwatak
+│◦➛ ${prefix}cekmati [nama]
+│◦➛ ${prefix}wangy [nama]
+│◦➛ ${prefix}citacita
+│◦➛ ${prefix}toxic
+│◦➛ ${prefix}truth
+│◦➛ ${prefix}dare
+│◦➛ ${prefix}apakah
+│◦➛ ${prefix}bisakah
+│◦➛ ${prefix}kapankah
+│◦➛ ${prefix}rate
+│◦➛ ${prefix}jadian
+│◦➛ ${prefix}cantik
+│◦➛ ${prefix}ganteng
+│◦➛ ${prefix}beban
+│◦➛ ${prefix}babi
+│◦➛ ${prefix}cekganteng
+│◦➛ ${prefix}cekcantik
+└❏ 
+
+
+┌❏ *I N F O M E N U*
+│◦➛ ${prefix}update
+│◦➛ ${prefix}level
+│◦➛ ${prefix}rules
+│◦➛ ${prefix}profile
+│◦➛ ${prefix}waktu
+│◦➛ ${prefix}botstat
+│◦➛ ${prefix}sewabot
+│◦➛ ${prefix}listsewa
+│◦➛ ${prefix}owner
+│◦➛ ${prefix}ping
+│◦➛ ${prefix}runtime
+│◦➛ ${prefix}donasi
+│◦➛ ${prefix}leaderboard
+│◦➛ ${prefix}cekpremium
+│◦➛ ${prefix}listpremium
+│◦➛ ${prefix}sourcecode
+│◦➛ ${prefix}bugreport *keluhan
+└❏ 
+
+┌❏ *I S L A M I M E N U*
+│◦➛ ${prefix}listsurah
+│◦➛ ${prefix}alquran
+│◦➛ ${prefix}alquranaudio
+│◦➛ ${prefix}asmaulhusna
+│◦➛ ${prefix}kisahnabi
+│◦➛ ${prefix}jadwalsholat
+└❏ 
+
+
+╠═══✪〘 Sound Menu〙✪══
+╠➥${prefix}sound1
+╠➥${prefix}sound2
+╠➥${prefix}sound3
+╠➥${prefix}sound4
+╠➥${prefix}sound5
+╠➥${prefix}sound6
+╠➥${prefix}sound7
+╠➥${prefix}sound8
+╠➥${prefix}sound9
+╠➥${prefix}sound10
+╠➥${prefix}sound11
+╠➥${prefix}sound12
+╠➥${prefix}sound13
+╠➥${prefix}sound14
+╠➥${prefix}sound15
+╠➥${prefix}sound16
+╠➥${prefix}sound17
+╠➥${prefix}sound18
+╠➥${prefix}sound19
+╠➥${prefix}sound20
+╠➥${prefix}sound21
+╠➥${prefix}sound22
+╠➥${prefix}sound23 ` 
+wibu = `${botName}`
+           ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `${prefix}sewabot`, buttonText: { displayText: `⬡ SEWA BOT\n\n_jika bot tidak merespon ketik ${prefix}sewabot_` }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+          break
+case 'menu': 
+              
+          thu = await ikyy.getStatus(`${sender.split('@')[0]}@s.whatsapp.net`, MessageType.text)
+              groups = ikyy.chats.array.filter(v => v.jid.endsWith('g.us'))
+              privat = ikyy.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+              ram2 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
+              charger = `${charging ? 'lagi dicas' : 'ga dicas'}`
+              uptime = process.uptime();
+              timestampe = speed();
+              totalChat = await ikyy.chats.all()
+              latensie = speed() - timestampe
+              total = math(`${groups.length}*${privat.length}`)
+              
+              try {
+               var pic = await ikyy.getProfilePicture(`${sender.split('@')[0]}@c.us`)
+            } catch {
+                var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
+            }
+              
+        menu =`  
+${ucapanWaktu} Kak ${pushname}
+      
+┌❏ *INDONESIA TIME*
+${petik}│◦➛ ${prefix}WIB : ${timuu}
+│◦➛ ${prefix}WITA : ${wita}
+└❏ WIT : ${wit}${petik}
+                          
+┌❏ *TODAY*
+${petik}│◦➛${ucapanWaktu}
+│◦➛Jam : ${timuu}
+└❏ Tanggal : ${date}${petik}
+
+┌❏ *DEVICE*
+${petik}│◦➛Whatsapp : ${ikyy.user.phone.wa_version}
+│◦➛Merk HP : ${device_manufacturer}
+│◦➛Versi HP : ${device_model}
+│◦➛Versi OS : ${os_version}
+│◦➛RAM : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+│◦➛MCC : ${mcc}
+└❏ MNC : ${mnc}${petik}
+
+┌─❑「 *BOT INFO* 」
+${petik}│◦➛ Owner :${ownerName}
+│◦➛Group Chats : ${groups.length}
+│◦➛𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐂𝐡𝐚𝐭𝐬 : ${privat.length}
+│◦➛𝐁𝐚𝐭𝐞𝐫𝐚𝐢 : ${baterai}% ${charger}
+│◦➛𝐓𝐨𝐭𝐚𝐥 𝐂𝐡𝐚𝐭𝐬 : ${totalChat.length}
+│◦➛𝐀𝐜𝐭𝐢𝐯𝐞 : ${runtime(process.uptime())}
+│◦➛▢ 𝐏𝐥𝐚𝐭𝐟??𝐫𝐦 : ${os.platform()}
+└❏ ${petik}` 
+wibu = `${botName}`
+           ikyy.sendMessage(from, { contentText: `${menu}`, footerText: `${wibu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: `⬡ LIST MENU\n\n_jika bot tidak merespon ketik ${prefix}command_` }, type: 1 },{ buttonId: `${prefix}sewabot`, buttonText: { displayText: `⬡ SEWA BOT\n\n_jika bot tidak merespon ketik ${prefix}sewabot_` }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ikyads, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+     break
                    // Random Text //
                 case 'quotes':
                     quotes = await fetchJson(`https://api.lolhuman.xyz/api/random/quotes?apikey=${setting.lolkey}`)
@@ -1601,7 +1591,7 @@ wibu = `${quotes}`
 ${ucapanWaktu} Kak ${pushname}`               
 
 
-wibu = `┏⬡  𝐋𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
+wibu = `┏⬡  ??𝐈𝐒𝐓 𝐌𝐄𝐍𝐔
 ┃▹  ɢʀᴏᴜᴘꜱᴇᴛᴛɪɴɢ
 ┃▹  ᴀꜰᴋ *ᴀʟᴀꜱᴀɴ*
 ┃▹  ᴄᴇᴋꜱᴇᴡᴀ
@@ -3330,7 +3320,17 @@ Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contex
        case 'sewabot':
        case 'iklan':
       gopeynya = `${setting.ppbot}`
-     teksnya = `${setting.hargaSewa}`
+     teksnya = `*‼️LIST SEWA BOT ‼️*
+
+*| • 1 Minggu : 2k*
+*| • 1 Bulan : 5k*
+*| • permanen : 8k*
+
+_PAYMENT GOPAY AND QRIS ALL PAY ONLY_
+________________________
+
+_*MINAT? CHAT :*_
+*Wa.me//+6283872619737*`
 
               ikyy.sendMessage(from, await getBuffer(gopeynya), image, {quoted: mek, caption: teksnya, thumbnail: Buffer.alloc(0) })
               break
@@ -6210,10 +6210,26 @@ case 'caripesan':  //by ANU TEAM
              break
 //------------------< Menunya Bang:v >-------------------
       case 'don':
-             reply(`${setting.don}`)
+             reply(`*_亗DONASI亗_*
+
+
+*GOPAY :* https://wa.me/p/6594644487273939/6283872619737
+
+*QRIS ALL PAY :*
+https://wa.me/p/3186733424783872/6283872619737
+
+*_untuk saat ini, hanya tersedia itu saja kak :)_*`)
              break
       case 'infoig':
-             reply(`${setting.gc}`)
+             reply(`*_亗DONASI亗_*
+
+
+*GOPAY :* https://wa.me/p/6594644487273939/6283872619737
+
+*QRIS ALL PAY :*
+https://wa.me/p/3186733424783872/6283872619737
+
+*_untuk saat ini, hanya tersedia itu saja kak :)_*`)
              break
       case 'gc':
       reply(`${setting.gc}`)
@@ -6255,11 +6271,7 @@ const loli = fs.readFileSync('./assets/numa')
 
         }
        
-if (budy.includes("#menu")){
-verif (`SABAR! LOADING UNTUK MENAMPILKAN MENU`)
-}
-        
-
+       
 if (fs.existsSync(`./media/${from}.json`)) {
 gelutSkuy = setGelud(`${from}`)
 if (sender == `${gelutSkuy.Y}@s.whatsapp.net` && budy.toLowerCase() == 'y') {
